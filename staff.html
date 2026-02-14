@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spike's Farm - Our Team</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <button class="menu-button" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <div class="nav-popup" id="navPopup" onclick="closeMenuIfClickedOutside(event)">
+        <div class="nav-container">
+            <div class="logo">🌾 Spike's Farm</div>
+            <ul class="nav-links">
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="products.html" onclick="toggleMenu()">Products</a></li>
+                <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+                <li><a href="staff.html" onclick="toggleMenu()">Staff</a></li>
+                <li><a href="faq.html" onclick="toggleMenu()">FAQ</a></li>
+                <li><a href="contact.html" onclick="toggleMenu()">Contact Us</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products..." id="searchInput">
+                <button onclick="performSearch(); toggleMenu();">🔍</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1>Meet Our Team</h1>
+            <p>The dedicated people behind Spike's Farm</p>
+        </section>
+
+        <!-- Staff Section -->
+        <section class="staff">
+            <div class="staff-grid">
+                <div class="staff-card">
+                    <div class="staff-avatar">👨‍🌾</div>
+                    <h3>Roderick Madzime</h3>
+                    <p class="role">Farm Owner & Manager</p>
+                    <p class="bio">With years of agricultural experience, Spike leads our farm with passion and dedication to sustainable farming practices.</p>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-avatar">👩‍🌾</div>
+                    <h3>Derek</h3>
+                    <p class="role">Head of Crop Production</p>
+                    <p class="bio">Derek oversees all crop cultivation, ensuring our vegetables are grown with the highest quality standards.</p>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-avatar">👨‍🌾</div>
+                    <h3>Rodney</h3>
+                    <p class="role">Livestock Manager</p>
+                    <p class="bio">Rodney manages our pig farming operations, ensuring optimal health and care for all our livestock.</p>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-avatar">👩‍🌾</div>
+                    <h3>Craig</h3>
+                    <p class="role">Sales & Distribution</p>
+                    <p class="bio">Craig coordinates all sales and ensures timely delivery of our fresh products to customers.</p>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-avatar">👨‍🌾</div>
+                    <h3>Stembile</h3>
+                    <p class="role">Farm Operations</p>
+                    <p class="bio">Stembile manages day-to-day farm operations, keeping everything running smoothly and efficiently.</p>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-avatar">👩‍🌾</div>
+                    <h3>Stembile</h3>
+                    <p class="role">Quality Control</p>
+                    <p class="bio">Stembile ensures every product meets our strict quality standards before it reaches our customers.</p>
+                </div>
+            </div>
+
+            <div class="team-info">
+                <h2 class="section-title">Why Our Team Matters</h2>
+                <p>At Spike's Farm, our team is our greatest asset. Each member brings unique skills, experience, and dedication to ensuring we deliver the best products and service to our customers. From planting to harvest, from care to delivery, our team works together to maintain the high standards that Spike's Farm is known for.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- AI Assistant -->
+    <div class="ai-assistant">
+        <button class="ai-button" onclick="toggleAI()">🤖</button>
+        <div class="ai-chat" id="aiChat">
+            <div class="ai-header">
+                <span>Farm Assistant</span>
+                <button class="ai-close" onclick="toggleAI()">×</button>
+            </div>
+            <div class="ai-messages" id="aiMessages">
+                <div class="ai-message bot">
+                    Hello! 👋 Welcome to Spike's Farm! I'm here to help you with any questions about our products, pricing, delivery, or anything else. How can I assist you today?
+                </div>
+            </div>
+            <div class="ai-input-container">
+                <input type="text" class="ai-input" id="aiInput" placeholder="Ask me anything..." onkeypress="if(event.key==='Enter') sendMessage()">
+                <button class="ai-send" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Spike's Farm</strong> - Growing Excellence, Raising Quality</p>
+        <p>📍 Palapye, near Morupule, Botswana</p>
+        <p>📞 +26772548612 | +26774332787</p>
+        <p>&copy; 2026 Spike's Farm. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
