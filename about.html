@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spike's Farm - About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <button class="menu-button" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <div class="nav-popup" id="navPopup" onclick="closeMenuIfClickedOutside(event)">
+        <div class="nav-container">
+            <div class="logo">🌾 Spike's Farm</div>
+            <ul class="nav-links">
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="products.html" onclick="toggleMenu()">Products</a></li>
+                <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+                <li><a href="staff.html" onclick="toggleMenu()">Staff</a></li>
+                <li><a href="faq.html" onclick="toggleMenu()">FAQ</a></li>
+                <li><a href="contact.html" onclick="toggleMenu()">Contact Us</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products..." id="searchInput">
+                <button onclick="performSearch(); toggleMenu();">🔍</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1>About Spike's Farm</h1>
+            <p>Growing with care, serving with pride</p>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <div class="about-content">
+                <h2 class="section-title">Our Story</h2>
+                <p>Welcome to Spike's Farm, your trusted source for premium farm produce and quality livestock in Palapye. Nestled near Morupule, our farm has been dedicated to sustainable agriculture and excellence for years.</p>
+                
+                <p>We take pride in growing the finest organic vegetables including tomatoes, green peppers, beans, maize, butternuts, sweet potatoes, and okra. Each crop is cultivated with care, using traditional farming methods combined with modern agricultural practices to ensure the highest quality produce reaches your table.</p>
+                
+                <p>In addition to our diverse vegetable production, we specialize in raising healthy, well-cared-for pigs. Our livestock is raised in optimal conditions with proper nutrition and veterinary care, ensuring you receive only the best quality meat.</p>
+                
+                <p>At Spike's Farm, we believe in community, sustainability, and delivering fresh, nutritious food to families across Botswana. Whether you're looking for farm-fresh vegetables or quality livestock, we're here to serve you with dedication and integrity.</p>
+                
+                <p>Visit us today and experience the difference that comes from truly caring about what we grow and raise!</p>
+            </div>
+
+            <div class="values-section">
+                <h2 class="section-title">Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🌍</div>
+                        <h3>Sustainability</h3>
+                        <p>We practice eco-friendly farming that protects our land for future generations</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">💪</div>
+                        <h3>Quality</h3>
+                        <p>Every product meets our high standards before reaching your table</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">❤️</div>
+                        <h3>Community</h3>
+                        <p>We're committed to supporting and serving our local community</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h3>Integrity</h3>
+                        <p>Honest, transparent farming practices you can trust</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mission-section">
+                <h2 class="section-title">Our Mission</h2>
+                <div class="mission-content">
+                    <p>To provide the people of Botswana with the freshest, highest-quality farm produce and livestock through sustainable farming practices, while building a stronger agricultural community and contributing to food security in our nation.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- AI Assistant -->
+    <div class="ai-assistant">
+        <button class="ai-button" onclick="toggleAI()">🤖</button>
+        <div class="ai-chat" id="aiChat">
+            <div class="ai-header">
+                <span>Farm Assistant</span>
+                <button class="ai-close" onclick="toggleAI()">×</button>
+            </div>
+            <div class="ai-messages" id="aiMessages">
+                <div class="ai-message bot">
+                    Hello! 👋 Welcome to Spike's Farm! I'm here to help you with any questions about our products, pricing, delivery, or anything else. How can I assist you today?
+                </div>
+            </div>
+            <div class="ai-input-container">
+                <input type="text" class="ai-input" id="aiInput" placeholder="Ask me anything..." onkeypress="if(event.key==='Enter') sendMessage()">
+                <button class="ai-send" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Spike's Farm</strong> - Growing Excellence, Raising Quality</p>
+        <p>📍 Palapye, near Morupule, Botswana</p>
+        <p>📞 +26772548612 | +26774332787</p>
+        <p>&copy; 2026 Spike's Farm. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
