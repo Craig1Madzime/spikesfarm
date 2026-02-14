@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spike's Farm - FAQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <button class="menu-button" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <div class="nav-popup" id="navPopup" onclick="closeMenuIfClickedOutside(event)">
+        <div class="nav-container">
+            <div class="logo">🌾 Spike's Farm</div>
+            <ul class="nav-links">
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="products.html" onclick="toggleMenu()">Products</a></li>
+                <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+                <li><a href="staff.html" onclick="toggleMenu()">Staff</a></li>
+                <li><a href="faq.html" onclick="toggleMenu()">FAQ</a></li>
+                <li><a href="contact.html" onclick="toggleMenu()">Contact Us</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search products..." id="searchInput">
+                <button onclick="performSearch(); toggleMenu();">🔍</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about our farm</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What are your operating hours?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    We're open Monday to Saturday from 7:00 AM to 6:00 PM, and Sundays from 8:00 AM to 2:00 PM. We're here to serve you throughout the week!
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Do you offer delivery services?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! We offer delivery services within Palapye and surrounding areas. For bulk orders, we can arrange delivery across Botswana. Contact us for more details on delivery fees and schedules.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Are your products organic?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    We practice sustainable farming with minimal use of chemicals. While we're working toward full organic certification, we prioritize natural farming methods and the health of our soil and crops.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Can I visit the farm?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Absolutely! We welcome farm visits. Please call ahead to schedule a tour so we can ensure someone is available to show you around and answer your questions.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Do you accept bulk orders?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, we specialize in both retail and wholesale. For restaurants, hotels, or large-scale buyers, we offer competitive pricing on bulk orders. Contact us to discuss your needs.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>How do I purchase your pigs?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Our pigs are available for purchase year-round. You can visit the farm to select your livestock, or call us to discuss availability, pricing, and your specific requirements.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>What payment methods do you accept?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    We accept cash, mobile money transfers, and bank transfers. For large orders, we can arrange flexible payment terms.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>How fresh are your products?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Our vegetables are harvested daily and are available the same day or next day. We ensure maximum freshness from farm to table.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Do you offer farm tours for schools or groups?</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! We love hosting educational farm tours for schools, organizations, and groups. Contact us in advance to schedule a group visit.
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta">
+            <h2>Still have questions?</h2>
+            <p>Don't hesitate to reach out to us!</p>
+            <a href="contact.html" class="btn-primary">Contact Us →</a>
+        </section>
+    </main>
+
+    <!-- AI Assistant -->
+    <div class="ai-assistant">
+        <button class="ai-button" onclick="toggleAI()">🤖</button>
+        <div class="ai-chat" id="aiChat">
+            <div class="ai-header">
+                <span>Farm Assistant</span>
+                <button class="ai-close" onclick="toggleAI()">×</button>
+            </div>
+            <div class="ai-messages" id="aiMessages">
+                <div class="ai-message bot">
+                    Hello! 👋 Welcome to Spike's Farm! I'm here to help you with any questions about our products, pricing, delivery, or anything else. How can I assist you today?
+                </div>
+            </div>
+            <div class="ai-input-container">
+                <input type="text" class="ai-input" id="aiInput" placeholder="Ask me anything..." onkeypress="if(event.key==='Enter') sendMessage()">
+                <button class="ai-send" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Spike's Farm</strong> - Growing Excellence, Raising Quality</p>
+        <p>📍 Palapye, near Morupule, Botswana</p>
+        <p>📞 +26772548612 | +26774332787</p>
+        <p>&copy; 2026 Spike's Farm. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
